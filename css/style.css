@@ -1,4 +1,108 @@
+/* general*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
 body {
-    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* bg-fullwidth */
+
+.bg-white {
+    background-color: white;
+    color: #031b4e;
+}
+
+.bg-blue {
+    background-color: #005fff;
+    color: white;
+}
+
+.bg-blue-fish {
+    background-image: url("https://www.digitalocean.com/static/bg-home-hero-3-bb4b33b77274db09b969f629ad81c4d5.svg");
+    background-size: cover;
+    position: relative;
+}
+
+/* typo */
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+h4 {
+
+}
+
+
+/* button */
+
+
+section {
+    padding: 50px 0;
+}
+
+nav {
+    height: 65px;
+    /* delete */
+}
+
+section .heading-left {
+    text-align: center;
+
+}
+
+section.heading .jumb-title{
+    text-align: center;
+    /* height: 400px; */
+}
+
+section .jumbotron {
+    padding-top: 10px;
+    min-width: 350px;
+}
+
+.jumbotron .jumb-title h4{
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.jumbotron input {
+    height: 45px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    section .heading {
+        position: relative;
+
+    }
+
+    section .heading-left {
+        text-align: left;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+
 
 }
