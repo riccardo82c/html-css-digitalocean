@@ -1,9 +1,9 @@
 /* general*/
-* {
+/* * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+} */
 
 .clearfix::after {
     content: "";
@@ -83,12 +83,12 @@ h4 {
 .btn-ocean-white:hover {
     background-color: #005fff;
     color: white;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 /* section style */
 section {
-    padding: 100px 20px;
+    padding: 80px 20px;
 }
 
 nav {
@@ -130,8 +130,19 @@ section.heading .jumb-title {
     float: left;
 }
 
+.btn-white-left i{
+    font-size: 18px;
+    padding-right: 10px;
+
+}
+
 .btn-white-right {
     float: right;
+}
+
+.btn-white-right i{
+    font-size: 18px;
+
 }
 
 .heading .signing-up {
@@ -152,39 +163,39 @@ section.brand h4 {
     margin-bottom: 40px;
 }
 
-.brand .bus-sol {
+.arrow-link {
     margin-top: 40px;
 }
 
-.brand .bus-sol a {
+.arrow-link a {
     color: #006dfe;
     font-weight: 700;
 }
 
-.brand .bus-sol a:hover {
+.arrow-link a:hover {
     text-decoration: none;
     color: #1633ff;
     font-weight: 700;
 }
 
-/* deploy section */
-section.deploy {
+/* deploy-business section (same style)*/
+section.deploy-business {
     text-align: center;
 }
 
-section.deploy h3 {
+section.deploy-business h3 {
     color: #5b6987;
 }
 
-section.deploy .row:first-child {
+section.deploy-business .row:first-child {
     margin-bottom: 40px;
 }
 
-section.deploy .fake-margin-bottom {
+section.deploy-business .fake-margin-bottom {
     margin-bottom: 40px;
 }
 
-section.deploy .aside-nav a {
+section.deploy-business .aside-nav a {
     text-decoration: none;
     display: inline-block;
     /* padding: 0 30px; */
@@ -196,38 +207,71 @@ section.deploy .aside-nav a {
     z-index: 2;
 }
 
-section.deploy .aside-nav a.active {
+section.deploy-business .aside-nav a.active {
     color: #031b4e;
     border-bottom: 3px solid #0069ff;
     position: relative;
     z-index: 1;
 }
 
-section.deploy .aside-nav a:hover {
+section.deploy-business .aside-nav a:hover {
     text-decoration: none;
     color: #031b4e;
     border-bottom: 3px solid #0069ff;
 }
 
 
-section.deploy .deploy-boxes {
+section.deploy-business .deploy-business-boxes {
     text-align: center;
     margin-top: 40px;
     padding: 0 20px;
 }
 
-section.deploy .deploy-boxes h4 {
+section.deploy-business .deploy-business-boxes h4 {
     margin-top: 25px;
     color: #031b4e;
     font-size: 18px;
     font-weight: 700;
 }
 
-section.deploy .deploy-boxes p {
+section.deploy-business .deploy-business-boxes p {
     color: #031b4e;
     font-size: 16px;
     color: #5b6987;
 }
+
+/* section developer */
+section.developer {
+    text-align: center;
+    color: #031b4e;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+/* IMPORTANTE: PER FITTARE L'IMMAGINE ALL'INTERNO DELLA COL
+CREO UN CONTENITORE ATTORNO ALL'IMMAGINE E IMPOSTO L'IMMAGINE
+CON WIDTH 100% / MENTRE NEL HTML METTO IMG RESPONSIVE CHE MI
+APPLICA: max-width: 100%;, height: auto; and display: block;
+to the image so that it scales nicely to the parent element.*/
+section.developer .developer-carousel-box img{
+    width: 100%;
+}
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+section.developer .developer-carousel-box {
+    margin: 80px 0 40px;
+}
+
+section.developer p{
+    font-size: 18px;
+}
+
+/* section business */
+/* in gran parte stilizzata come deploy */
+
+section.deploy-business .only-business-boxes {
+    margin-bottom: 80px;
+}
+
 
 
 
@@ -246,38 +290,45 @@ section.deploy .deploy-boxes p {
         position: relative;
     } */
 
-    section.deploy .aside-nav {
+    section.deploy-business .aside-nav {
         margin-bottom: 40px;
     }
 
-    section.deploy .aside-nav a {
+    section.deploy-business .aside-nav a {
         margin-bottom: 20px;
         /* width: 30%; */
         text-align: left;
     }
 
-    /* changing board of deploy vertical navbar */
-    section.deploy .aside-nav a {
+    /* changing board of deploy-business vertical navbar */
+    section.deploy-business .aside-nav a {
         margin-bottom: 0;
         padding: 15px;
         border-bottom: none;
         border-left: 3px solid lightgrey;
     }
 
-    section.deploy .aside-nav a.active {
+    section.deploy-business .aside-nav a.active {
         border-left: 3px solid #0069ff;
         border-bottom: none;
     }
 
-    section.deploy .aside-nav a:hover {
+    section.deploy-business .aside-nav a:hover {
         border-bottom: none;
         border-left: 3px solid #0069ff;
     }
 
-    section.deploy .deploy-boxes {
+    section.deploy-business .only-deploy-boxes {
         text-align: left;
         margin-bottom: 40px;
         margin-top: 0;
 
     }
+}
+
+@media screen and (min-width: 992px) {
+    section.deploy-business .only-business-boxes {
+        text-align: center;
+    }
+
 }
