@@ -1,5 +1,4 @@
 /* general*/
-
 * {
     padding: 0;
     margin: 0;
@@ -12,13 +11,11 @@
     display: table;
 }
 
-
 body {
     font-family: 'Montserrat', sans-serif;
 }
 
 /* bg-fullwidth */
-
 .bg-white {
     background-color: white;
     color: #031b4e;
@@ -39,11 +36,9 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 /* typo */
-
 h1 {
     font-size: 30px;
     font-weight: 700;
@@ -57,16 +52,13 @@ h2 {
 h3 {
     font-size: 20px;
     font-weight: 300;
-
 }
 
 h4 {
     font-size: 14px;
 }
 
-
 /* button and button hover*/
-
 .btn-ocean {
     padding: 12px 20px;
     background-color: #005fff;
@@ -94,12 +86,6 @@ h4 {
     border: 1px solid white;
 }
 
-
-
-
-
-
-
 /* section style */
 section {
     padding: 50px 20px;
@@ -111,25 +97,23 @@ nav {
 }
 
 /* heading section */
-
 section .heading-left-ocean {
     text-align: center;
     margin-bottom: 80px;
-
 }
 
-section.heading .jumb-title{
+section.heading .jumb-title {
     text-align: center;
     /* height: 400px; */
 }
 
-.jumbotron.bg-white{
+.jumbotron.bg-white {
     padding: 30px;
     width: 350px;
     margin: auto;
 }
 
-.jumbotron .jumb-title h4{
+.jumbotron .jumb-title h4 {
     font-weight: 700;
     margin-bottom: 40px;
 }
@@ -159,12 +143,11 @@ section.heading .jumb-title{
 }
 
 /* brand section */
-
 section.brand {
     text-align: center;
 }
 
-section.brand h4{
+section.brand h4 {
     font-weight: 700;
     margin-bottom: 40px;
 }
@@ -185,33 +168,37 @@ section.brand h4{
 }
 
 /* deploy section */
-
 section.deploy {
     text-align: center;
 }
 
-section.deploy h3{
+section.deploy h3 {
     color: #5b6987;
 }
 
-section.deploy .row:first-child{
+section.deploy .row:first-child {
     margin-bottom: 40px;
 }
 
-
-
-section.deploy .aside-nav a{
-
+section.deploy .aside-nav a {
+    text-decoration: none;
     display: inline-block;
+    /* padding: 0 30px; */
+    width: 80px;
+    margin: 0 auto;
     font-size: 18px;
     color: #5b6987;
-    border-bottom: 3px solid transparent;
-}
-section.deploy  .aside-nav a.active{
-    border-bottom: 3px solid #0069ff;
+    border-bottom: 3px solid lightgrey;
+    z-index: 2;
 }
 
-section.deploy .aside-nav a:hover{
+section.deploy .aside-nav a.active {
+    border-bottom: 3px solid #0069ff;
+    position: relative;
+    z-index: 1;
+}
+
+section.deploy .aside-nav a:hover {
     text-decoration: none;
     color: #031b4e;
     border-bottom: 3px solid #0069ff;
@@ -224,37 +211,25 @@ section.deploy .deploy-boxes {
 
 .deploy-boxes {
     height: 100px;
-
 }
 
-
-
-
-
-
 @media screen and (min-width: 768px) {
-
-    section.heading h1{
+    section.heading h1 {
         font-size: 58px;
     }
-
-
 
     section .heading-left-ocean {
         top: 100%;
         text-align: left;
         margin-top: 80px;
-
     }
 
-    .container-top-left{
+    .container-top-left {
         position: relative;
     }
 
     section.deploy .aside-nav {
-
         margin-bottom: 50px;
-
     }
 
     section.deploy .aside-nav a {
@@ -264,9 +239,20 @@ section.deploy .deploy-boxes {
     }
 
     /* changing board of deploy vertical navbar */
+    section.deploy .aside-nav a {
+        margin-bottom: 0;
+        padding: 10px 0;
+        border-bottom: none;
+        border-left: 3px solid lightgrey;
+    }
 
+    section.deploy .aside-nav a.active {
+        border-left: 3px solid #0069ff;
+        border-bottom: none;
+    }
 
-
-
-
+    section.deploy .aside-nav a:hover {
+        border-bottom: none;
+        border-left: 3px solid #0069ff;
+    }
 }
