@@ -88,7 +88,7 @@ h4 {
 
 /* section style */
 section {
-    padding: 50px 20px;
+    padding: 100px 20px;
 }
 
 nav {
@@ -180,19 +180,24 @@ section.deploy .row:first-child {
     margin-bottom: 40px;
 }
 
+section.deploy .fake-margin-bottom {
+    margin-bottom: 40px;
+}
+
 section.deploy .aside-nav a {
     text-decoration: none;
     display: inline-block;
     /* padding: 0 30px; */
     width: 80px;
-    margin: 0 auto;
-    font-size: 18px;
+    margin: 0 10px;
+    font-size: 16px;
     color: #5b6987;
     border-bottom: 3px solid lightgrey;
     z-index: 2;
 }
 
 section.deploy .aside-nav a.active {
+    color: #031b4e;
     border-bottom: 3px solid #0069ff;
     position: relative;
     z-index: 1;
@@ -204,14 +209,27 @@ section.deploy .aside-nav a:hover {
     border-bottom: 3px solid #0069ff;
 }
 
-section.deploy .aside-nav,
+
 section.deploy .deploy-boxes {
-    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 20px;
 }
 
-.deploy-boxes {
-    height: 100px;
+section.deploy .deploy-boxes h4 {
+    margin-top: 25px;
+    color: #031b4e;
+    font-size: 18px;
+    font-weight: 700;
 }
+
+section.deploy .deploy-boxes p {
+    color: #031b4e;
+    font-size: 16px;
+    color: #5b6987;
+}
+
+
 
 @media screen and (min-width: 768px) {
     section.heading h1 {
@@ -224,24 +242,24 @@ section.deploy .deploy-boxes {
         margin-top: 80px;
     }
 
-    .container-top-left {
+    /* .container-top-left {
         position: relative;
-    }
+    } */
 
     section.deploy .aside-nav {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 
     section.deploy .aside-nav a {
         margin-bottom: 20px;
-        width: 30%;
+        /* width: 30%; */
         text-align: left;
     }
 
     /* changing board of deploy vertical navbar */
     section.deploy .aside-nav a {
         margin-bottom: 0;
-        padding: 10px 0;
+        padding: 15px;
         border-bottom: none;
         border-left: 3px solid lightgrey;
     }
@@ -254,5 +272,12 @@ section.deploy .deploy-boxes {
     section.deploy .aside-nav a:hover {
         border-bottom: none;
         border-left: 3px solid #0069ff;
+    }
+
+    section.deploy .deploy-boxes {
+        text-align: left;
+        margin-bottom: 40px;
+        margin-top: 0;
+
     }
 }
