@@ -12,7 +12,8 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Poppins', sans-serif;
 }
 
 /* bg-fullwidth */
@@ -167,16 +168,25 @@ section.brand h4 {
     margin-top: 40px;
 }
 
+.arrow-link a:after {
+    font-size: 14px;
+    font-weight: 400;
+    content: ' \276F';
+    color: #1e79fd;
+}
+
 .arrow-link a {
     color: #006dfe;
     font-weight: 700;
 }
 
-.arrow-link a:hover {
+.arrow-link a:hover,
+.arrow-link a:hover:after {
     text-decoration: none;
     color: #1633ff;
-    font-weight: 700;
+
 }
+
 
 /* deploy-business section (same style)*/
 section.deploy-business {
@@ -224,7 +234,7 @@ section.deploy-business .aside-nav a:hover {
 section.deploy-business .deploy-business-boxes {
     text-align: center;
     margin-top: 40px;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 
 section.deploy-business .deploy-business-boxes h4 {
@@ -263,6 +273,13 @@ section.developer .developer-carousel-box {
 
 section.developer p{
     font-size: 18px;
+}
+
+section.developer i {
+    font-size: 10px;
+    padding: 0 5px;
+    color: #0069ff;
+
 }
 
 /* section business */
@@ -328,7 +345,7 @@ section.deploy-business .only-business-boxes {
 
 @media screen and (min-width: 992px) {
     section.deploy-business .only-business-boxes {
-        text-align: center;
+        text-align: left;
     }
 
 }
