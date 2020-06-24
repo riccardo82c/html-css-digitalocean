@@ -129,9 +129,52 @@ section {
     padding: 80px 20px;
 }
 
-nav {
-    height: 65px;
-    /* delete */
+/*******************/
+/* NAVBAR section */
+/*******************/
+.navbar {
+    margin-bottom: 0;
+    color: #005fff;
+}
+
+/* height brand img */
+.navbar-brand > img {
+    max-height: 25px;
+}
+
+/*set up correct navbar height */
+a.navbar-brand {
+    padding-top: 18px;
+    padding-bottom: 48px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 66px;
+    padding-top: 0;
+    padding-right: 5px;
+    padding-bottom: 0;
+    color: #031b4e;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #1633ff;
+}
+
+.navbar-form.navbar-right {
+    margin-top: 11px;
+}
+
+/* button sign up style */
+.navbar .btn-ocean-white {
+    padding: 10px;
+}
+
+/* down chevron */
+nav i{
+    font-size: 14px;
+    padding-left: 5px;
 }
 
 /*******************/
@@ -485,7 +528,6 @@ footer .list a:hover {
 
 /*  */
 footer .footer-bottom {
-
     padding: 40px 0;
     border-top: 1px solid rgba(120, 134, 140, 0.36);
     margin-top: 20px;
@@ -522,7 +564,7 @@ footer .footer-bottom-right span a {
 }
 
 footer .footer-bottom-right span a:hover {
-    color:white;
+    color: white;
 }
 
 footer .footer-bottom-right span a:last-child {
@@ -619,8 +661,6 @@ footer .footer-bottom-right span a:last-child {
         border-bottom: 1px solid transparent;
     }
 
-
-
     /* allineamento testo e tasto sezione started */
     .align-text-started-left {
         text-align: left;
@@ -628,5 +668,44 @@ footer .footer-bottom-right span a:last-child {
 
     .align-text-started-right {
         text-align: right;
+    }
+}
+
+
+/* Correct collapsing navbar at md size max */
+@media (max-width: 992px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
     }
 }
