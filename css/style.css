@@ -135,6 +135,7 @@ section {
 .navbar {
     margin-bottom: 0;
     color: #005fff;
+    background-color: white;
 }
 
 /* height brand img */
@@ -149,7 +150,7 @@ a.navbar-brand {
 }
 
 .navbar-default .navbar-nav > li > a {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 66px;
     padding-top: 0;
@@ -166,6 +167,16 @@ a.navbar-brand {
     margin-top: 11px;
 }
 
+.navbar-default .navbar-toggle {
+    margin-top: 16px;
+    border: none;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
 /* button sign up style */
 .navbar .btn-ocean-white {
     padding: 10px;
@@ -173,8 +184,14 @@ a.navbar-brand {
 
 /* down chevron */
 nav i{
-    font-size: 14px;
+    font-size: 12px;
     padding-left: 5px;
+}
+
+/* dropdown */
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+    color: #555;
+    background-color: transparent;
 }
 
 /*******************/
@@ -707,5 +724,24 @@ footer .footer-bottom-right span a:last-child {
     }
     .collapse.in{
         display:block !important;
+    }
+
+    /*  */
+
+    .navbar .navbar-form.navbar-right{
+        display: none;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        text-align: center;
+        line-height: 30px;
+        padding-top: 0;
+        padding-right: 5px;
+        padding-bottom: 0;
+    }
+
+    .navbar .dropdown-menu{
+        width: 100%;
+
     }
 }
