@@ -50,10 +50,13 @@ body {
 .bg-blue-world {
     color: white;
     background: #031b4e url("https://images.prismic.io/www-static/bb563ec9-49ef-4ceb-8468-da84f1509fcc_bg-map-solid.svg?auto=compress,format");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .bg-dark-blue {
-    background-color: #031b4e;
+    background-color: #010e28;
 }
 
 /*******************/
@@ -397,6 +400,7 @@ section.carousel-section.teams .carousel-section-carousel-box {
 }
 
 section.carousel-section.teams .carousel-section-carousel-box h3 {
+    line-height: 35px;
     margin-bottom: 30px;
 }
 
@@ -442,10 +446,12 @@ section.get-started .btn-account {
 /*******************/
 /* FOOTER section */
 /*******************/
+.footer {
+    padding-bottom: 0;
+}
 
 footer .list {
-    height: 400px;
-
+    min-height: 480px;
 }
 
 footer .list .list-title {
@@ -453,40 +459,64 @@ footer .list .list-title {
     margin-bottom: 20px;
 }
 
-footer .list li{
+footer .list li {
     margin-bottom: 15px;
 }
 
-footer .list a{
+footer .list a {
     color: #78868c;
 }
 
-footer .list a:hover{
+footer .list a:hover {
     color: white;
     text-decoration: none;
 }
 
-
 /*  */
-
 footer .footer-bottom {
-    height: 200px;
-    padding: 40px;
+
+    padding: 40px 0;
     border-top: 1px solid rgba(120, 134, 140, 0.36);
+    margin-top: 20px;
+    color: #78868c;
 }
 
 footer .footer-bottom-left {
-    background-color: red;
+    text-align: center;
     width: 100%;
+    height: 50px;
     float: left;
 }
 
 footer .footer-bottom-right {
-    background-color: green;
+    text-align: center;
     width: 100%;
+    height: 50px;
     float: right;
 }
 
+footer .footer-bottom-right span,
+footer .footer-bottom-left span {
+    line-height: 50px;
+}
+
+footer .footer-bottom-left span {
+    margin-left: 20px;
+}
+
+footer .footer-bottom-right span a {
+    font-size: 25px;
+    margin-right: 10px;
+    color: #78868c;
+}
+
+footer .footer-bottom-right span a:hover {
+    color:white;
+}
+
+footer .footer-bottom-right span a:last-child {
+    margin-right: 0;
+}
 
 /*******************/
 /* MEDIA QUERIES SETTINGS */
@@ -536,16 +566,35 @@ footer .footer-bottom-right {
         margin-top: 0;
     }
 
+    /* compaiono le freccette accanto al carosello */
+    section.carousel-section .carousel-section-carousel-box:after,
+    section.carousel-section .carousel-section-carousel-box:before {
+        position: absolute;
+        top: 50%;
+        font-size: 30px;
+        font-weight: 400;
+        color: #031b4e;
+    }
+
+    section.carousel-section .carousel-section-carousel-box:after {
+        left: 105%;
+        content: ' \276F';
+    }
+
+    section.carousel-section .carousel-section-carousel-box:before {
+        right: 105%;
+        content: ' \276E';
+    }
 
     /* cambio la divisione dei due bottom footer */
     footer .footer-bottom-left {
-        width: 50%;
-
+        text-align: left;
+        width: 55%;
     }
 
     footer .footer-bottom-right {
-        width: 50%;
-
+        text-align: right;
+        width: 45%;
     }
 }
 
@@ -559,25 +608,7 @@ footer .footer-bottom-right {
         border-bottom: 1px solid transparent;
     }
 
-    /* compaiono le freccette accanto al carosello */
-    section.carousel-section .carousel-section-carousel-box:after,
-    section.carousel-section .carousel-section-carousel-box:before {
-        position: absolute;
-        top: 50%;
-        font-size: 30px;
-        font-weight: 400;
-        color: #031b4e;
-    }
 
-    section.carousel-section .carousel-section-carousel-box:after {
-        left: 100%;
-        content: ' \276F';
-    }
-
-    section.carousel-section .carousel-section-carousel-box:before {
-        right: 100%;
-        content: ' \276E';
-    }
 
     /* allineamento testo e tasto sezione started */
     .align-text-started-left {
