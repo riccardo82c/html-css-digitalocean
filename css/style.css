@@ -4,7 +4,6 @@
     margin: 0;
     box-sizing: border-box;
 } */
-
 .clearfix::after {
     content: "";
     clear: both;
@@ -37,6 +36,11 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.bg-blue-world {
+    color: white;
+    background: #031b4e url("https://images.prismic.io/www-static/bb563ec9-49ef-4ceb-8468-da84f1509fcc_bg-map-solid.svg?auto=compress,format");
 }
 
 /* typo */
@@ -131,19 +135,17 @@ section.heading .jumb-title {
     float: left;
 }
 
-.btn-white-left i{
+.btn-white-left i {
     font-size: 18px;
     padding-right: 10px;
-
 }
 
 .btn-white-right {
     float: right;
 }
 
-.btn-white-right i{
+.btn-white-right i {
     font-size: 18px;
-
 }
 
 .heading .signing-up {
@@ -184,9 +186,7 @@ section.brand h4 {
 .arrow-link a:hover:after {
     text-decoration: none;
     color: #1633ff;
-
 }
-
 
 /* deploy-business section (same style)*/
 section.deploy-business {
@@ -230,7 +230,6 @@ section.deploy-business .aside-nav a:hover {
     border-bottom: 3px solid #0069ff;
 }
 
-
 section.deploy-business .deploy-business-boxes {
     text-align: center;
     margin-top: 40px;
@@ -250,9 +249,10 @@ section.deploy-business .deploy-business-boxes p {
     color: #5b6987;
 }
 
-/* section developer */
-section.developer {
+/* section developer carousel */
+section.carousel-section {
     text-align: center;
+    font-weight: 200;
     color: #031b4e;
 }
 
@@ -262,36 +262,119 @@ CREO UN CONTENITORE ATTORNO ALL'IMMAGINE E IMPOSTO L'IMMAGINE
 CON WIDTH 100% / MENTRE NEL HTML METTO IMG RESPONSIVE CHE MI
 APPLICA: max-width: 100%;, height: auto; and display: block;
 to the image so that it scales nicely to the parent element.*/
-section.developer .developer-carousel-box img{
+section.carousel-section .carousel-section-carousel-box img {
     width: 100%;
 }
-/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
 
-section.developer .developer-carousel-box {
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+section.carousel-section .carousel-section-carousel-box {
     margin: 80px 0 40px;
 }
 
-section.developer p{
+
+
+section.carousel-section p {
     font-size: 18px;
 }
 
-section.developer i {
+section.carousel-section i {
     font-size: 10px;
     padding: 0 5px;
     color: #0069ff;
-
 }
 
 /* section business */
 /* in gran parte stilizzata come deploy */
-
 section.deploy-business .only-business-boxes {
     margin-bottom: 80px;
+}
+
+/* section band */
+section.band {
+    text-align: center;
+}
+
+section.band .row:first-child {
+    margin-bottom: 60px;
+}
+
+section.band a {
+    color: #0069e4;
+}
+
+section.band a:hover {
+    text-decoration: none;
+    color: #1633ff;
+}
+
+.city-band {
+    margin: 0 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(140, 140, 140, 0.15);
+}
+
+.city-band-no-bord {
+    border-bottom: 1px solid transparent;
+}
+
+.code-city, .name-city {
+    float: left;
+    padding-right: 50px;
+}
+
+.name-city {
+    color: #98a2b7;
+}
+
+.speed-test {
+    float: right;
+}
+
+/* sezione team carousel */
+/* vado a cambiare l'immagine come viene fittata che non sarà
+più widht:100% ma margini:0 auto;*/
+section.carousel-section.teams img {
+    width: 200px;
+    margin: 0 auto;
+}
+
+section.carousel-section.teams .carousel-section-carousel-box {
+    background-color: white;
+
+    padding: 50px 20%;
+    text-align: center;
+    max-width: 100%;
+}
+
+section.carousel-section.teams .carousel-section-carousel-box h3 {
+    margin-bottom: 30px;
+}
+
+section.carousel-section.teams .carousel-section-carousel-box h3.blockquote:before {
+    content: open-quote;
+    position: relative;
+    top: 54px;
+    right: 5px;
+
+    /* font-weight: bold; */
+    font-size: 90px;
+    color:#98a2b7;
+}
+section.carousel-section.teams .carousel-section-carousel-box h3.blockquote:after {
+    content: close-quote;
+    position: relative;
+    top: 18px;
+    left: 5px;
+    font-size: 30px;
+    color:#98a2b7;
 }
 
 
 
 
+/* section.carousel-section.teams .carousel-section-carousel-box h3 {
+    min-width: 80%;
+} */
 @media screen and (min-width: 768px) {
     section.heading h1 {
         font-size: 58px;
@@ -306,7 +389,6 @@ section.deploy-business .only-business-boxes {
     /* .container-top-left {
         position: relative;
     } */
-
     section.deploy-business .aside-nav {
         margin-bottom: 40px;
     }
@@ -339,7 +421,6 @@ section.deploy-business .only-business-boxes {
         text-align: left;
         margin-bottom: 40px;
         margin-top: 0;
-
     }
 }
 
@@ -348,4 +429,28 @@ section.deploy-business .only-business-boxes {
         text-align: left;
     }
 
+    .city-band-no-bord-md {
+        border-bottom: 1px solid transparent;
+    }
+
+
+    /* compaiono le freccette accanto al carosello */
+    section.carousel-section .carousel-section-carousel-box:after,
+    section.carousel-section .carousel-section-carousel-box:before {
+        position: absolute;
+        top: 50%;
+        font-size: 30px;
+        font-weight: 400;
+        color: #031b4e;
+    }
+
+    section.carousel-section .carousel-section-carousel-box:after {
+        left: 100%;
+        content: ' \276F';
+    }
+
+    section.carousel-section .carousel-section-carousel-box:before {
+        right: 100%;
+        content: ' \276E';
+    }
 }
