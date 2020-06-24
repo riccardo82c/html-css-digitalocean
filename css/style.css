@@ -55,6 +55,13 @@ body {
     background-repeat: no-repeat;
 }
 
+.bg-blue-fish-little {
+    background-image: url("https://www.digitalocean.com/static/bg-home-hero-3-bb4b33b77274db09b969f629ad81c4d5.svg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
 .bg-dark-blue {
     background-color: #010e28;
 }
