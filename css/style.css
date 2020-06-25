@@ -219,6 +219,10 @@ section .heading-left-ocean {
     margin-bottom: 80px;
 }
 
+section .heading-left-ocean h3 {
+    font-size: 24px;
+}
+
 section.heading .jumb-title {
     text-align: center;
     padding-top: 20px;
@@ -241,7 +245,7 @@ section.heading .jumb-title {
 }
 
 .jumbotron.bg-white {
-    width: 350px;
+    width: 370px;
     margin: auto;
 }
 
@@ -250,8 +254,10 @@ section.heading .jumb-title {
 }
 
 .jumbotron .jumb-title h4 {
-    font-weight: 700;
+    padding-top: 5px;
     margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .jumbotron input {
@@ -280,7 +286,6 @@ section.heading .jumb-title {
 }
 
 .heading .signing-up {
-    width: 350px;
     margin: 10px auto 0;
     text-align: center;
     font-size: 12px;
@@ -300,7 +305,7 @@ section.brand h4 {
 }
 
 .arrow-link {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .arrow-link a:after {
@@ -333,10 +338,6 @@ section.deploy-business h3 {
 }
 
 section.deploy-business .row:first-child {
-    margin-bottom: 40px;
-}
-
-section.deploy-business .fake-margin-bottom {
     margin-bottom: 40px;
 }
 
@@ -422,7 +423,7 @@ section.carousel-section i {
 /* BUSINESS section */
 /*******************/
 section.deploy-business .only-business-boxes {
-    margin-bottom: 80px;
+    margin: 60px 0;
 }
 
 /*******************/
@@ -631,6 +632,12 @@ footer .footer-bottom-right span a:last-child {
 @media screen and (min-width: 768px) {
     section.heading h1 {
         font-size: 58px;
+    }
+
+    /* margine fittizio per evitare che il secondo box di dx
+    finisca sotto aside di sx */
+    section.deploy-business .fake-margin-bottom {
+        margin-bottom: 40px;
     }
 
     section.deploy-business .aside-nav {
