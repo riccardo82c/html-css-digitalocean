@@ -123,14 +123,10 @@ p {
 }
 
 /*******************/
-/* STYLIZING SECTION */
+/* STYLIZING ALL SECTION */
 /*******************/
 section {
-    padding: 100px 20px;
-}
-
-section.heading{
-    padding: 166px 20px 100px 20px;
+    padding: 100px 20px 100px;
 }
 
 /*******************/
@@ -143,7 +139,7 @@ section.heading{
 }
 
 /* height brand img */
-.navbar-brand > img {
+.navbar-brand>img {
     max-height: 25px;
 }
 
@@ -153,7 +149,7 @@ a.navbar-brand {
     padding-bottom: 48px;
 }
 
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav>li>a {
     font-size: 14px;
     font-weight: 400;
     line-height: 66px;
@@ -163,7 +159,7 @@ a.navbar-brand {
     color: #031b4e;
 }
 
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-default .navbar-nav>li>a:hover {
     color: #1633ff;
 }
 
@@ -187,13 +183,13 @@ a.navbar-brand {
 }
 
 /* down chevron */
-nav i{
+nav i {
     font-size: 12px;
     padding-left: 5px;
 }
 
 /* dropdown */
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     color: #555;
     background-color: transparent;
 }
@@ -201,20 +197,56 @@ nav i{
 /*******************/
 /* HEADING section */
 /*******************/
+/*fixed height for the columns in the banner section */
+/* per utilizzare position absolute sul contenuto poi*/
+.height-fixed {
+    height: 400px;
+}
+
+/* margine superiore per distanziarmi della grandezza della nav */
+section.heading {
+    margin-top: 66px;
+    padding-top: 0;
+    padding-bottom: 166px;
+}
+
+/* posizione assolutamente al centro la parte sx del banner */
 section .heading-left-ocean {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     text-align: center;
     margin-bottom: 80px;
 }
 
 section.heading .jumb-title {
     text-align: center;
-    /* height: 400px; */
+    padding-top: 20px;
+    padding-bottom: 1px;
+    margin-top: 13px;
+    background-color: #f3f5f9;
+    border-radius: 6px 6px 0 0;
+}
+
+/* posizione assolutamente al centro la parte dx del banner */
+.centering-jumbo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+    padding: 0;
 }
 
 .jumbotron.bg-white {
-    padding: 30px;
     width: 350px;
     margin: auto;
+}
+
+.jumbo-padding {
+    padding: 30px;
 }
 
 .jumbotron .jumb-title h4 {
@@ -601,12 +633,6 @@ footer .footer-bottom-right span a:last-child {
         font-size: 58px;
     }
 
-    section .heading-left-ocean {
-        top: 100%;
-        text-align: left;
-        margin-top: 80px;
-    }
-
     section.deploy-business .aside-nav {
         margin-bottom: 40px;
     }
@@ -674,6 +700,21 @@ footer .footer-bottom-right span a:last-child {
 
 /* Medium devices phone */
 @media screen and (min-width: 992px) {
+    .height-fixed {
+        height: 800px;
+    }
+
+    section.heading {
+        margin-top: 66px;
+        padding-top: 0;
+        padding-bottom: 0;
+        /* padding: 166px 20px 100px 20px; */
+    }
+
+    section .heading-left-ocean {
+        text-align: left;
+    }
+
     section.deploy-business .only-business-boxes {
         text-align: left;
     }
@@ -692,51 +733,58 @@ footer .footer-bottom-right span a:last-child {
     }
 }
 
-
 /* Correct collapsing navbar at md size max */
 @media (max-width: 992px) {
     .navbar-header {
         float: none;
     }
-    .navbar-left,.navbar-right {
+
+    .navbar-left, .navbar-right {
         float: none !important;
     }
+
     .navbar-toggle {
         display: block;
     }
+
     .navbar-collapse {
         border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
+
     .navbar-fixed-top {
         top: 0;
         border-width: 0 0 1px;
     }
+
     .navbar-collapse.collapse {
-        display: none!important;
+        display: none !important;
     }
+
     .navbar-nav {
-        float: none!important;
+        float: none !important;
         margin-top: 7.5px;
     }
+
     .navbar-nav>li {
         float: none;
     }
+
     .navbar-nav>li>a {
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    .collapse.in{
-        display:block !important;
+
+    .collapse.in {
+        display: block !important;
     }
 
     /*  */
-
-    .navbar .navbar-form.navbar-right{
+    .navbar .navbar-form.navbar-right {
         display: none;
     }
 
-    .navbar-default .navbar-nav > li > a {
+    .navbar-default .navbar-nav>li>a {
         text-align: center;
         line-height: 30px;
         padding-top: 0;
@@ -744,8 +792,7 @@ footer .footer-bottom-right span a:last-child {
         padding-bottom: 0;
     }
 
-    .navbar .dropdown-menu{
+    .navbar .dropdown-menu {
         width: 100%;
-
     }
 }
