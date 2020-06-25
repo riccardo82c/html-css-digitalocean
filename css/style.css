@@ -412,7 +412,7 @@ section.deploy-business .deploy-business-boxes p {
 
 .carousel-indicators li {
     background-color: rgba(0, 0, 0, 0);
-    border: 2px solid #0069ff;
+    border: 1px solid #0069ff;
     border-radius: 50%;
 }
 
@@ -423,14 +423,19 @@ section.deploy-business .deploy-business-boxes p {
     background-color: #0069ff;
 }
 
+.carousel-indicators li,
+.carousel-indicators li.active {
+    margin: 0 4px;
+}
+
 .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
-    margin-right: -100%;
+    margin-right: -120%;
     color: #333;
     display: none;
 }
 .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev {
-    margin-left: -100%;
+    margin-left: -120%;
     color: #333;
     display: none;
 }
@@ -766,7 +771,7 @@ footer .footer-bottom-right span a:last-child {
 
     .carousel-indicators.controls {
         position: absolute;
-        top: 125%;
+        top: 120%;
     }
 
     /* ************************ */
@@ -810,7 +815,7 @@ footer .footer-bottom-right span a:last-child {
     .carousel-indicators.controls {
 
         position: absolute;
-        top: 115%;
+        top: 112%;
     }
 
     /* ************************* */
