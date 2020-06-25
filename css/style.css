@@ -153,9 +153,8 @@ a.navbar-brand {
     color: #031b4e;
 }
 
-*/
 
-/* .navbar-default .navbar-nav>li>a:hover {
+ .navbar-default .navbar-nav>li>a:hover {
     color: #1633ff;
 }
 
@@ -178,21 +177,13 @@ a.navbar-brand {
     padding: 10px;
 }
 
-/* down chevron */
-nav i {
-    font-size: 12px;
-    padding-left: 5px;
-}
-
 /* dropdown */
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     color: #555;
     background-color: transparent;
 }
 
-.navbar-toggle.collapsed {
-    margin-top: 16px;
-}
+
 
 /*******************/
 /* HEADING section */
